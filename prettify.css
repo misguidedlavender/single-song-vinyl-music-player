@@ -1,0 +1,98 @@
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible');
+}
+
+:root {
+  --UIcolor: #193366;
+}
+
+h5,
+h6,
+p {
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  color: var(--UIcolor);
+  margin: 2px;
+}
+
+.player-unit {
+  width: 150px;
+  padding: 40px;
+  text-align: center;
+  justify-items: center;
+  background-image: url('https://cur.glitter-graphics.net/pub/2968/2968670q6wcymndhc.gif');
+  border-radius: 40px 40px 0px 0px;
+  position: fixed;
+  bottom: 0px;
+  right: 30px;
+}
+
+.vinyl-container::before {
+  content: url('https://www.clipartmax.com/png/full/358-3587206_vinyl-record-player-arm.png');
+  z-index: 2;
+  position: absolute;
+  transform: scale(0.23);
+  transform-origin: 0% 0%;
+}
+
+.vinyl-cover {
+  animation: rotate 8s infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+hr {
+  border: 2px dashed var(--UIcolor);
+}
+
+.song-info {
+  margin: 20px;
+}
+
+.song-name {
+  font-size: 26px;
+}
+
+.artist-name {
+  font-size: 24px;
+}
+
+.player-info {
+  height: 20px;
+  width: 120px;
+  display: grid;
+  grid: 'symbol status';
+  align-items: center;
+  margin: auto;
+}
+
+.play-controls {
+  grid-area: symbol;
+  display: flex;
+  align-self: center;
+}
+
+#pause-symbol {
+  display: none;
+}
+
+#play-symbol,
+#pause-symbol {
+  width: 18px;
+}
+
+#status {
+  grid-area: status;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
